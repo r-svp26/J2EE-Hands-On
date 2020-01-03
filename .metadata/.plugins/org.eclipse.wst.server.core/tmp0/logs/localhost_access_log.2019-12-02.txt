@@ -1,0 +1,5 @@
+127.0.0.1 - - [02/Dec/2019:13:00:48 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [02/Dec/2019:13:00:50 +0530] "GET /ServletBasics/HelloServlet HTTP/1.1" 405 1116
+0:0:0:0:0:0:0:1 - - [02/Dec/2019:13:00:50 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [02/Dec/2019:13:09:35 +0530] "GET /ServletBasics/WEB-INF/index.html HTTP/1.1" 404 1047
+0:0:0:0:0:0:0:1 - - [02/Dec/2019:13:09:52 +0530] "GET /ServletBasics/HelloServlet HTTP/1.1" 405 1116
