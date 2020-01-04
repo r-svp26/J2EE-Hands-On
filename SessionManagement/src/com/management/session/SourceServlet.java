@@ -19,15 +19,15 @@ public class SourceServlet extends HttpServlet {
 
 		/* To get Session using Cookie */
 
-		System.out.println("Source Servlet Cookie");
 		Cookie[] cookies = req.getCookies();
-		for (int i = 0; i < cookies.length; i++) {
-			System.out.println(cookies[i].getName());
-			System.out.println(cookies[i].getValue());
+		if (cookies != null) {
+			for (int i = 0; i < cookies.length; i++) {
+				System.out.println(cookies[i].getName());
+				System.out.println(cookies[i].getValue());
+			}
 		}
 
 		/* To add Custom Cookie */
-
 		resp.addCookie(new Cookie("Security-Token", "scnt12xy"));
 
 		String userName = req.getParameter("userName");
@@ -37,6 +37,12 @@ public class SourceServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 		out.print("<h1> <a href='TargetServlet'>Click Here To Get Userame</a></h1>");
+
+		/*
+		 * String url="TargetServlet?sessionId=421"; out.print("<h1> <a href="'+
+		 * url +'">Click Here To Get Userame</a></h1>");
+		 * 
+		 */
 
 	}
 
