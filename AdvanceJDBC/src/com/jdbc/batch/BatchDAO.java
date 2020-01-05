@@ -18,14 +18,12 @@ public class BatchDAO {
 			int[] result = st.executeBatch();
 
 			for (int i = 0; i < result.length; i++) {
-				System.out.println(result[i]);
+				System.out.println(+result[i]+ " Data is Inserted");
 
 			}
 
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
-
 }
