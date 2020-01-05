@@ -21,7 +21,7 @@ public class CreateUserServlet extends HttpServlet {
 	public void init() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			 conn = DriverManager.getConnection("jdbc:mysql//localhost/udemy","root", "password");
+			 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/udemy?user=root&password=password");
 			System.out.println("Connection Established Successfully!!");
 		} catch (SQLException e) {
 			e.printStackTrace();
