@@ -1,0 +1,44 @@
+package com.statement.in;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class InsertStatement {
+
+	public static void main(String[] args) {
+
+		Connection con = null;
+		Statement stmt = null;
+		String qry = "insert into student values(8,'Deepika Padukone','Mumbai')";
+
+		try {
+
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet?user=root&password=admin");
+			stmt = con.createStatement();
+			stmt.executeUpdate(qry);
+			System.out.println("Data inserted successfully !");
+
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if (stmt != null) {
+				try {
+					stmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+
+		}
+	}
+}

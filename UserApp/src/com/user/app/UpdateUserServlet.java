@@ -21,7 +21,7 @@ public class UpdateUserServlet extends HttpServlet {
 	public void init() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/udemy?user=root&password=password");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet?user=root&password=admin");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
@@ -38,7 +38,7 @@ public class UpdateUserServlet extends HttpServlet {
 
 		try {
 			Statement st = conn.createStatement();
-			int result = st.executeUpdate(" update user set password='"+password+"' where email='"+email+"' ");
+			int result = st.executeUpdate(" update users set password='"+password+"' where email='"+email+"' ");
 
 			PrintWriter out = response.getWriter();
 			if (result > 0) {

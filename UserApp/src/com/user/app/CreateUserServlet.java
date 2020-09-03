@@ -21,8 +21,8 @@ public class CreateUserServlet extends HttpServlet {
 	public void init() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			 conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/udemy?user=root&password=password");
-			System.out.println("Connection Established Successfully!!");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet?user=root&password=admin");
+			System.out.println("Connection Established Successfully!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 
@@ -41,7 +41,7 @@ public class CreateUserServlet extends HttpServlet {
 
 		try {
 			Statement st = conn.createStatement();
-			int result = st.executeUpdate("insert into user values('" + firstName + "','" + lastName + "','" + email
+			int result = st.executeUpdate("insert into users values('" + firstName + "','" + lastName + "','" + email
 					+ "','" + password + "' )");
 			PrintWriter out = response.getWriter();
 			if (result > 0) {
@@ -61,7 +61,5 @@ public class CreateUserServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
-
 }

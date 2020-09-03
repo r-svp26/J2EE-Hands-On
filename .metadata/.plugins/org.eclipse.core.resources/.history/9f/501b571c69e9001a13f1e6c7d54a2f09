@@ -1,0 +1,29 @@
+package org.resultset.in;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class DataRetrieval {
+
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		PreparedStatement ptmt=null;
+		ResultSet rs=null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver registerd and loaded successfully");
+			
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet?user=root&password=admin");
+			System.out.println("Connection Established!");
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+}

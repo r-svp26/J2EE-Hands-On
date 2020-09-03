@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.jdbc.batch.BatchDao&apos; to &apos;BatchDAO&apos;&#x0D;&#x0A;- Original project: &apos;AdvanceJDBC&apos;&#x0D;&#x0A;- Original element: &apos;com.jdbc.batch.BatchDao&apos;&#x0D;&#x0A;- Renamed element: &apos;com.jdbc.batch.BatchDAO&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;BatchDao&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.jdbc.batch{BatchDao.java[BatchDao" matchStrategy="1" name="BatchDAO" qualified="false" references="true" similarDeclarations="false" stamp="1578221795923" textual="false" version="1.0"/>
+</session>

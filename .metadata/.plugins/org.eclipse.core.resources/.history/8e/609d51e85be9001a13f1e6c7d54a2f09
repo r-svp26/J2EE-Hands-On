@@ -1,0 +1,8 @@
+package com.statement.in;
+
+public class UpdateStatement {
+
+	public static void main(String[] args) {
+
+	}
+}

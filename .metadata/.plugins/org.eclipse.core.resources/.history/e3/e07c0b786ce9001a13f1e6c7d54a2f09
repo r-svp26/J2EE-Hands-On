@@ -1,0 +1,10 @@
+package org.resultset.in;
+
+public class SpecificDataAccess {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

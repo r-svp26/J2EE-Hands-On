@@ -1,0 +1,48 @@
+package com.statement.in;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class MultipleInsertion {
+
+	public static void main(String[] args) {
+
+		Connection conn = null;
+		Statement stmt = null;
+
+		String qry1 = "INSERT INTO STUDENT VALUES(10,'Laxman','Ayodhya')";
+		String qry2 = "INSERT INTO STUDENT VALUES(11,'Radha','Gokul')";
+		String qry3 = "INSERT INTO STUDENT VALUES(12,'Meera','Sangam')";
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver registerd and loaded successfully");
+
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet?user=root&password=admin");
+			System.out.println("Connection Established");
+
+			stmt = conn.createStatement();
+			System.out.println("Platform created successfully");
+
+			stmt.executeUpdate(qry1);
+			stmt.executeUpdate(qry2);
+			stmt.executeUpdate(qry3);
+			System.out.println("Multiple data are inserted successfully!");
+
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+			}
+		}
+	}
+}

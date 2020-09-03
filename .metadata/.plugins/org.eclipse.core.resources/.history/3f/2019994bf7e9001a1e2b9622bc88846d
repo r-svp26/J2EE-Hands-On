@@ -1,0 +1,34 @@
+package orgs.batch.in;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class PreparedBatch {
+
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		PreparedStatement ps1=null;
+		PreparedStatement ps2=null;
+		PreparedStatement ps3=null;
+		
+		String in_Qry="INSERT INTO STUDENT VALUES(?,?,?)";
+		String del_Qry="DELETE FROM STUDENT WHERE ID=?";
+		String upd_Qry="UPDATE STUDENT SET NAME='Sonam' WHERE ID=12";
+		
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver registered and loaded");
+			
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+
+	}
+}

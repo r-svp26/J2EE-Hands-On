@@ -1,0 +1,8 @@
+package org.resultset.in;
+
+public class SpecificIDAccess {
+
+	public static void main(String[] args) {
+
+	}
+}

@@ -1,0 +1,8 @@
+package orgs.transaction.in;
+
+public class DAOTransaction {
+
+	public static void main(String[] args) {
+
+	}
+}

@@ -26,13 +26,13 @@ public class LoginServlet extends HttpServlet {
 		try {
 
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/udemy", "root", "password");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/servlet", "root", "admin");
 			Statement st = conn.createStatement();
-			ResultSet rs = st.executeQuery("select * from user where email ='" + userName + "' and password='" + password+"'");
+			ResultSet rs = st.executeQuery("select name from login where email ='" + userName + "' and password='" + password+"'");
 			
 			RequestDispatcher rd= req.getRequestDispatcher("HomeServlet");
 			if(rs.next()){
-				req.setAttribute("message","Welcome to The Inter-Servlet Communication "+userName);
+				req.setAttribute("message","Welcome to The Inter-Servlet Communication " +userName);
 				rd.forward(req, resp);
 			}else{
 				rd=req.getRequestDispatcher("login.html");

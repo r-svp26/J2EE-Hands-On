@@ -1,0 +1,28 @@
+package org.resultset.in;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class SpecificDataAccess {
+
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		PreparedStatement ptmt=null;
+		ResultSet rs=null;
+		
+		String qry="SELECT * FROM STUDENT WHERE NAME=?";
+		
+		
+		
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver registered and loaded");
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+}

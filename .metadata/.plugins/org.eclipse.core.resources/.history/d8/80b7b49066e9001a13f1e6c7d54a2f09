@@ -1,0 +1,8 @@
+package org.prepared.statement;
+
+public class MultipleInsertion {
+
+	public static void main(String[] args) {
+
+	}
+}

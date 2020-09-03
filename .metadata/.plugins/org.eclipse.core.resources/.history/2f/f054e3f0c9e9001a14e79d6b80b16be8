@@ -1,0 +1,47 @@
+package org.validation.login;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class Login {
+
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		PreparedStatement ptmt=null;
+		ResultSet rs=null;
+		
+		String qry="SELECT USERNAME FROM USER WHERE NAME=? AND PASSWORD=?";
+		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Name and Password");
+		String name=sc.nextLine();
+		String pwd=sc.nextLine();
+		
+		try {
+			
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver registered and loaded successfully");
+			
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306?user=root&password=admin");
+			System.out.println("Connection Established!");
+			
+			ptmt=conn.prepareStatement(qry);
+			
+			ptmt.setString(1,"name");
+			ptmt.setString(1,"pwd");
+			
+			
+			
+			
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+}

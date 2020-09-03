@@ -1,0 +1,12 @@
+127.0.0.1 - - [25/Aug/2020:10:42:00 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [25/Aug/2020:10:42:05 +0530] "GET /FirstServlet/Process HTTP/1.1" 405 1116
+0:0:0:0:0:0:0:1 - - [25/Aug/2020:10:42:05 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+127.0.0.1 - - [25/Aug/2020:10:43:19 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [25/Aug/2020:10:43:20 +0530] "GET /ServletBasics/HelloServlet HTTP/1.1" 200 61
+0:0:0:0:0:0:0:1 - - [25/Aug/2020:10:43:40 +0530] "GET /ServletBasics/AdditionServlet HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2020:10:44:13 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [25/Aug/2020:10:44:14 +0530] "GET /ServletBasics/AdditionServlet HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [25/Aug/2020:10:44:28 +0530] "GET /ServletBasics/AdditionServlet HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2020:10:48:36 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [25/Aug/2020:10:48:39 +0530] "GET /ServletPrograms/Cookie HTTP/1.1" 500 3620
+0:0:0:0:0:0:0:1 - - [25/Aug/2020:10:48:40 +0530] "GET /favicon.ico HTTP/1.1" 404 1085

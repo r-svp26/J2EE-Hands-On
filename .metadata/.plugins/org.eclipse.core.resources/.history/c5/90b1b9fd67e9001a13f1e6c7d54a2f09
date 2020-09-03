@@ -1,0 +1,8 @@
+package org.resultset.in;
+
+public class DataRetrieval {
+
+	public static void main(String[] args) {
+
+	}
+}

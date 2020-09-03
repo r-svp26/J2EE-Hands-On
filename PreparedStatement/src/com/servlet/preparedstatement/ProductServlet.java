@@ -23,7 +23,7 @@ public class ProductServlet extends HttpServlet {
 	public void init() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/udemy?user=root&password=password");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet?user=root&password=admin");
 			stmt = conn.prepareStatement("insert into product values(?,?,?,?)");
 
 		} catch (ClassNotFoundException e) {
@@ -31,7 +31,6 @@ public class ProductServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -66,7 +65,6 @@ public class ProductServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 }

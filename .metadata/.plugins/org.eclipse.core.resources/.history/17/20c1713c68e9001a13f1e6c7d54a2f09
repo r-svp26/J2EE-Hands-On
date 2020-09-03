@@ -1,0 +1,15 @@
+package org.resultset.in;
+
+public class DataRetrieval {
+
+	public static void main(String[] args) {
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver registerd and loaded successfully");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+}

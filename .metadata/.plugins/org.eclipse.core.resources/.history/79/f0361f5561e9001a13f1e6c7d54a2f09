@@ -1,0 +1,28 @@
+package com.statement.in;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class MultipleInsertStatement {
+
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		Statement stmt=null;
+		
+		String qry1="INSERT INTO STUDENT VALUES(9,'Rama','Ayodhya')";
+		String qry2="INSERT INTO STUDENT VALUES(10,'Radha,'Gokul')";
+		String qry3="INSERT INTO STUDENT VALUES(11,'Meera','Sangam')";
+		
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver registerd and loaded successfully");
+			
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+}

@@ -1,0 +1,53 @@
+package org.prepared.statement;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class InsertPreparedStatement {
+
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		PreparedStatement ptmt=null;
+		
+		String qry="INSERT INTO STUDENT VALUES(?,?,?)";
+		
+		
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			System.out.println("Driver registered and loaded");
+			
+			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/servlet?user=root&password=admin");
+			System.out.println("Connection Established!");
+			
+			ptmt=conn.prepareStatement(qry);
+			System.out.println("Platform created...");
+			
+			/* */
+			ptmt.setInt(1, 13);
+			ptmt.setString(2, "Maahi");
+			ptmt.setString(3, "Bhopal");
+			ptmt.executeUpdate();
+			System.out.println("Data inserted successfully");
+			
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}finally{
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			try {
+				ptmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+}

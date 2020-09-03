@@ -1,0 +1,8 @@
+package orgs.batch.in;
+
+public class PreparedBatch {
+
+	public static void main(String[] args) {
+
+	}
+}

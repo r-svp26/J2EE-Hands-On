@@ -32,7 +32,7 @@ public class TargetServlet extends HttpServlet {
 
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
-		out.print(" <h2>User Name Is: " + userName + "</h2>");
+		out.print(" <h3>User Name Is: " + userName + "</h3>");
 
 	}
 

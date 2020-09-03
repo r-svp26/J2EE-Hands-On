@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Session-Management/WebContent/WEB-INF/4.1 user.html.html&apos; to &apos;user.html&apos;" description="Rename resource &apos;4.1 user.html.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/WEB-INF/4.1 user.html.html" name="user.html" stamp="1578117850014" updateReferences="true"/>
+</session>

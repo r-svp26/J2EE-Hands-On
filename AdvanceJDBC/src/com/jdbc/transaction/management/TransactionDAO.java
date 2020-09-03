@@ -7,13 +7,15 @@ import java.sql.Statement;
 
 public class TransactionDAO {
 	public static void main(String[] args) {
+		
 		Connection conn = null;
+		
 
 		try {
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/udemy?user=root&password=password");
 			Statement st = conn.createStatement();
 
-			conn.setAutoCommit(false); // by Default true
+			conn.setAutoCommit(false); // by default true
 			st.executeUpdate("update account set bal=bal-500 where accno=2");
 			st.executeUpdate("update account set bal=bal+500 where accno=1");
 			conn.commit();
@@ -29,5 +31,4 @@ public class TransactionDAO {
 			}
 		}
 	}
-
 }

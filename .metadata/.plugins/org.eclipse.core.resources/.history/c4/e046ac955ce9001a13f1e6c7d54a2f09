@@ -1,0 +1,20 @@
+package com.statement.in;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class UpdateStatement {
+
+	public static void main(String[] args) {
+
+		Connection conn = null;
+		Statement stmt=null;
+		
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+	}
+}

@@ -1,0 +1,8 @@
+package com.statement.in;
+
+public class DeleteStatement {
+
+	public static void main(String[] args) {
+
+	}
+}

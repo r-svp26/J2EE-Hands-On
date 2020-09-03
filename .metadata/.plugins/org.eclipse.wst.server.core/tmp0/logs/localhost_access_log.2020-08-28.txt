@@ -1,0 +1,17 @@
+127.0.0.1 - - [28/Aug/2020:14:13:44 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:13:49 +0530] "GET /FirstServlet/Process HTTP/1.1" 405 1116
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:13:49 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+127.0.0.1 - - [28/Aug/2020:14:14:48 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:14:51 +0530] "GET /FirstServlet/Process HTTP/1.1" 405 1116
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:14:52 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:15:30 +0530] "GET /ServletBasics/HelloServlet HTTP/1.1" 200 61
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:15:58 +0530] "GET /ServletBasics/number.html HTTP/1.1" 200 433
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:15:59 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:16:06 +0530] "GET /ServletBasics/AdditionServlet?num1=10&num2=20&Submit=Submit HTTP/1.1" 200 15
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:16:46 +0530] "GET /ServletPrograms/number.html HTTP/1.1" 200 189
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:16:47 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:17:17 +0530] "GET /ServletPrograms/NumberServlet HTTP/1.1" 200 27
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:17:46 +0530] "GET /ServletPrograms/cookie.html HTTP/1.1" 200 381
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:18:12 +0530] "POST /ServletPrograms/Cookie HTTP/1.1" 500 3620
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:18:55 +0530] "GET /UserApp/addUser.html HTTP/1.1" 200 638
+0:0:0:0:0:0:0:1 - - [28/Aug/2020:14:19:41 +0530] "POST /UserApp/CreateUserServlet HTTP/1.1" 500 1463
